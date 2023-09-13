@@ -376,7 +376,7 @@ Parent = Orion
 
 function OrionLib:MakeNotification(NotificationConfig)
 spawn(function()
-NotificationConfig.Name = NotificationConfig.Name or "Pickle Hub"
+NotificationConfig.Name = NotificationConfig.Name or "Star XYZ Hub"
 NotificationConfig.Content = NotificationConfig.Content or "Owner By TranVanBao"
 NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://14765538999"
 NotificationConfig.Time = NotificationConfig.Time or 15
@@ -438,10 +438,10 @@ end
 function OrionLib:Init()
 if OrionLib.SaveCfg then
 pcall(function()
-if isfile(OrionLib.Folder .. "PickleHub" .. game.GameId .. .. game.Players.LocalPlayer.Name ..".json") then
-LoadCfg(readfile(OrionLib.Folder .. "PickleHub" .. game.GameId .. .. game.Players.LocalPlayer.Name ..".json"))
+if isfile(OrionLib.Folder .. "StarXYZHub" .. game.GameId ..".json") then
+LoadCfg(readfile(OrionLib.Folder .. "StarXYZHub" .. game.GameId ..".json"))
 OrionLib:MakeNotification({
-Name = "Pickle Hub",
+Name = "Star XYZ Hub",
 Content = "Loadings Config" .. game.GameId .. ".",
 Time = 5
 })
@@ -637,8 +637,8 @@ AddConnection(CloseBtn.MouseButton1Up, function()
 MainWindow.Visible = false
 UIHidden = true
 OrionLib:MakeNotification({
-Name = "Pickle Hub",
-Content = "What Are You Doing???",
+Name = "Star XYZ Hub",
+Content = "You Close Gui = You Gay!",
 Time = 5
 })
 WindowConfig.CloseCallback()
