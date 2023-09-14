@@ -1,10 +1,6 @@
 if game.PlaceId == 13370783664 then
-loadstring(game:HttpGet("doixiu"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/main/AECS.lua"))()
 else
-wait(0.5)
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/tranvanbao14112008/PickleHub/main/StatusW.lua"))()
-wait(1)
 game.StarterGui:SetCore("SendNotification", {
 Title = "Not Support Game",
 Text = "Shutdown In 5 Seconds!",
