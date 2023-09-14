@@ -1,0 +1,18 @@
+if game.PlaceId == 13370783664 then
+loadstring(game:HttpGet("doixiu"))()
+else
+wait(0.5)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tranvanbao14112008/PickleHub/main/StatusW.lua"))()
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Not Support Game",
+Text = "Shutdown In 5 Seconds!",
+Icon = "rbxassetid://14765538999",
+Duration = 5
+})
+wait(5)
+setclipboard("https://discord.gg/8wXcWRaW8r")
+wait(0.5)
+game.Players.LocalPlayer:Kick("Not Support Game Please Check Status!")
+end
