@@ -1,3 +1,6 @@
+repeat wait() until game:IsLoaded()
+game.Players.LocalPlayer.Character:WaitForChild"Humanoid"
+
 if game.PlaceId == 13370783664 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/main/AECS.lua"))()
 else
