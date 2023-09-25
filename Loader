@@ -7,7 +7,7 @@ else
 game.StarterGui:SetCore("SendNotification", {
 Title = "Not Support Game",
 Text = "Shutdown In 5 Seconds!",
-Icon = "rbxassetid://14765538999",
+Icon = "rbxassetid://14878105537",
 Duration = 5
 })
 wait(5)
