@@ -3,6 +3,10 @@ game.Players.LocalPlayer.Character:WaitForChild"Humanoid"
 
 if game.PlaceId == 13370783664 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/AECS.lua"))()
+
+elseif game.PlaceId == 14236123211 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/PS.lua"))()
+
 else
 game.StarterGui:SetCore("SendNotification", {
 Title = "Not Support Game",
