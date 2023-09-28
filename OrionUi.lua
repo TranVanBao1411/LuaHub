@@ -647,7 +647,7 @@ WindowConfig.CloseCallback()
 end)
 
 AddConnection(UserInputService.InputBegan, function(Input)
-if Input.KeyCode == Enum.KeyCode["9"] and UIHidden then
+if Input.KeyCode == Enum.KeyCode["F4"] and UIHidden then
 MainWindow.Visible = true
 end
 end)
