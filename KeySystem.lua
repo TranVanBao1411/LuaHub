@@ -98,8 +98,6 @@ local function isKeyValid(keyInput)
                 Time = 5
             })
             wait(2)
-            OrionLib:Destroy()
-            wait(1)
             loadscript()
             writefile(savedKeyPath, keyInput)
         else
