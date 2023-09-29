@@ -20,6 +20,8 @@ local function isKeyValid(keyInput)
                 Time = 5
             })
             wait(2)
+            OrionLib:Destroy()
+            wait(1)
             local Window = OrionLib:MakeWindow({Name = "Star XYZ Hub | Punch Simulator", HidePremium = false, IntroText = "Star XYZ Hub | Community", Icon = "14878105537"})
 
     g = hookfunction(wait, function(seconds)
