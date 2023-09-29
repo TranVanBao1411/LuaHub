@@ -6,6 +6,43 @@ local KeySystem = KeyLibrary.new(applicationName)
 local keyTextbox
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/main/OrionUi.lua')))()
 
+local Window = OrionLib:MakeWindow({Name = "Star XYZ Hub | Key System", HidePremium = false, IntroText = "Star XYZ Hub | Community", Icon = "14878105537"})
+
+local Web1s = Window:MakeTab({
+    Name = "Web1s",
+    Icon = "rbxassetid://14913479681",
+    PremiumOnly = false
+})
+
+local LinkVertise = Window:MakeTab({
+    Name = "LinkVertise",
+    Icon = "rbxassetid://14913489304",
+    PremiumOnly = false
+})
+
+Web1s:AddTextbox({
+    Name = "Put Your Key",
+    Default = "",
+    TextDisappear = false,
+    Callback = function(Value)
+        keyTextbox = Value
+    end
+})
+
+Web1s:AddButton({
+    Name = "Check Key",
+    Callback = function()
+        isKeyValid(keyTextbox)
+    end
+})
+
+Web1s:AddButton({
+    Name = "Get Key",
+    Callback = function()
+        KeySystem:copyGetKeyURL()
+    end
+})
+
 if readfile and writefile then
     local success_file, error_file = pcall(function()
         local is_key_present = isfile(savedKeyPath);
@@ -76,64 +113,4 @@ local function isKeyValid(keyInput)
     end
 end
 
-
-local Window = OrionLib:MakeWindow({Name = "Star XYZ Hub | Key System", HidePremium = false, IntroText = "Star XYZ Hub | Community", Icon = "14878105537"})
-
-local HomeTab = Window:MakeTab({
-    Name = "Home",
-    Icon = "rbxassetid://7040391851",
-    PremiumOnly = false
-})
-
-HomeTab:AddParagraph("Game Support","Anime Energy Clash Simulator | Punch Simulator")
-
-HomeTab:AddButton({
-	Name = "Coppy Youtube",
-	Callback = function()
-      		setclipboard("@tranvanbao1411")
-  	end    
-})
-
-HomeTab:AddButton({
-	Name = "Coppy Discord",
-	Callback = function()
-      		setclipboard("https://discord.gg/8wXcWRaW8r")
-  	end    
-})
-
-
-local Web1s = Window:MakeTab({
-    Name = "Web1s",
-    Icon = "rbxassetid://14913479681",
-    PremiumOnly = false
-})
-
-local LinkVertise = Window:MakeTab({
-    Name = "LinkVertise",
-    Icon = "rbxassetid://14913489304",
-    PremiumOnly = false
-})
-
-Web1s:AddTextbox({
-    Name = "Put Your Key",
-    Default = "",
-    TextDisappear = false,
-    Callback = function(Value)
-        keyTextbox = Value
-    end
-})
-
-Web1s:AddButton({
-    Name = "Check Key",
-    Callback = function()
-        isKeyValid(keyTextbox)
-    end
-})
-
-Web1s:AddButton({
-    Name = "Get Key",
-    Callback = function()
-        KeySystem:copyGetKeyURL()
-    end
-})
 
