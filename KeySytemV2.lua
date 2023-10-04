@@ -348,7 +348,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
 	                local onl_key = iskeyvalid(key_file_txt)
 	                
 	                if onl_key then
-	                	Notif.New("Saved Key Is Valid! Loading "..tostring(name).."...", 5)
+	                	Notif.New("Saved Key Is Valid! Loading...", 5)
 	                    CloseGUI()
 	                else
 	                    delfile(SavedKeyPath)
