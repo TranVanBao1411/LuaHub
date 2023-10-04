@@ -5,10 +5,12 @@ local window = library:Window("Loader")
 
 window:Button("Web1s", function()
    if game.PlaceId == 13370783664 then
+library:Destroy()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/AECS_Web1s.lua"))()
    elseif game.PlaceId == 14236123211 then
+library:Destroy()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/PS_Web1s.lua"))()
-      library:Destroy()
+      
    end
 end)
 
