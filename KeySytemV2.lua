@@ -1,4 +1,5 @@
-
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/OrionUi.lua')))()
+KeyLibrary = loadstring(game:HttpGet('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
 local KeySystemUI = { Closed = false }
 local UIMade = false;
 
@@ -94,7 +95,6 @@ local function MakeDraggable(gui)
         end
     end)
 end
-
 
 -- Main Function
 local function MakeUi(applicationName, name, info, discordInvite)
@@ -265,7 +265,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
     if discordInvite ~= "" then
         local discord = Instance.new("TextButton")
         discord.Font = Enum.Font.Gotham
-        discord.Text = "Coppy Server Discord"
+        discord.Text = "Join Pickle Hub | Community"
         discord.TextColor3 = Color3.new(1, 1, 1)
         discord.TextSize = 13
         discord.BackgroundColor3 = Color3.new(0, 0.588235, 0.392157)
@@ -309,8 +309,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
     local KeyLibRun, KeyLibError = pcall(function()
         --loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup.lua"))()
         --local KeySystem = _G.KSS.classes.keysystem.new(applicationName)
-        KeyLibrary = loadstring(game:HttpGet('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
-        local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/OrionUi.lua')))()
+
         KeySystem = KeyLibrary.new(applicationName)
         KeyClass = KeySystem:key()
     end)
@@ -324,7 +323,12 @@ local function MakeUi(applicationName, name, info, discordInvite)
         CloseGUI()
     else
         if KeyClass.is_banned then
-            game.Players.LocalPlayer:Kick("You Got Banner")
+            OrionLib:MakeNotification({
+                Name = "Star XYZ Hub",
+                Content = "You Got Banner",
+                Image = "rbxassetid://14957514584",
+                Time = 5
+            })
             CloseGUI()
             return
         end
@@ -349,7 +353,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
                         Name = "Star XYZ Hub",
                         Content = "Checking Saved Key...",
                         Image = "rbxassetid://14957514584",
-                        Time = 5
+                        Time = 2
                     })
 
                     local key_file_txt = readfile(SavedKeyPath)
@@ -358,7 +362,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
                     if onl_key then
                         OrionLib:MakeNotification({
                             Name = "Star XYZ Hub",
-                            Content = "Saved Key Is Valid! Loading...",
+                            Content = "Save Key Is Valid! Loading...",
                             Image = "rbxassetid://14957514584",
                             Time = 5
                         })
@@ -367,7 +371,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
                         delfile(SavedKeyPath)
                         OrionLib:MakeNotification({
                             Name = "Star XYZ Hub",
-                            Content = " ",
+                            Content = "Saved Key Is Invalid | Please Get New Key!",
                             Image = "rbxassetid://14957514584",
                             Time = 2
                         })
@@ -398,9 +402,19 @@ local function MakeUi(applicationName, name, info, discordInvite)
                 CloseGUI()
             else
                 if KeyClass.is_banned then
-                    game.Players.LocalPlayer:Kick("You Got Banner")
+                    OrionLib:MakeNotification({
+                        Name = "Star XYZ Hub",
+                        Content = "You Got Banner",
+                        Image = "rbxassetid://14957514584",
+                        Time = 5
+                    })
                 else
-                    game.Players.LocalPlayer:Kick("Invalid | Expired Key!")
+                    OrionLib:MakeNotification({
+                        Name = "Star XYZ Hub",
+                        Content = "Invalid | Expired Key!",
+                        Image = "rbxassetid://14957514584",
+                        Time = 2
+                    })
                 end
                 text_box.Text = ""
             end
