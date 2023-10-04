@@ -268,7 +268,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
     if discordInvite ~= "" then
         local discord = Instance.new("TextButton")
         discord.Font = Enum.Font.Gotham
-        discord.Text = "Join Pickle Hub | Community"
+        discord.Text = "Coppy Server Discord"
         discord.TextColor3 = Color3.new(1, 1, 1)
         discord.TextSize = 13
         discord.BackgroundColor3 = Color3.new(0, 0.588235, 0.392157)
@@ -366,7 +366,7 @@ local function MakeUi(applicationName, name, info, discordInvite)
 	        local keyValid = iskeyvalid(text_box.Text)
 	        if keyValid then
 	            if writefile then writefile(SavedKeyPath, CurrentKeyInput) end
-	            Notif.New("Key Is Valid! Loading "..tostring(name).."...", 5)
+	            Notif.New("Key Is Valid! Loading...", 5)
 	            CloseGUI()
 	        else
 				if KeyClass.is_banned then 
