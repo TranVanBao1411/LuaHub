@@ -1,22 +1,13 @@
-
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
-
-local window = library:Window("Loader")
-
-window:Button("Web1s", function()
-   if game.PlaceId == 13370783664 then
-library:Destroy()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/AECS_Web1s.lua"))()
-   elseif game.PlaceId == 14236123211 then
-library:Destroy()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/PS_Web1s.lua"))()
-      
-   end
-end)
-
-window:Button("LinkVertise", function()
-   library:Destroy()
-end)
-
-window:Label("Web1s 6 Checkpoint 3 Day", Color3.fromRGB(127, 143, 166))
-window:Label("LinkVertise (Soon)", Color3.fromRGB(127, 143, 166))
+if _G.SelectWeb == "LinkVertise" then
+    if game.PlaceId == 13370783664 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/AECS_LinkVertise.lua"))()
+    elseif game.PlaceId == 14236123211 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/PS_LinkVertise.lua"))()
+    end
+elseif _G.SelectWeb == "Web1s" then
+    if game.PlaceId == 13370783664 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/AECS_Web1s.lua"))()
+    elseif game.PlaceId == 14236123211 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/PS_Web1s.lua"))()
+    end
+end
