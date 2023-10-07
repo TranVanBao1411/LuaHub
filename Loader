@@ -1,9 +1,8 @@
 if _G.SelectWeb == "LinkVertise" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/LinkVertise.lua"))()
-    end
 elseif _G.SelectWeb == "Web1s" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/Web1s.lua"))()
 else
-         game.Players.LocalPlayer:Kick("Check Your Clipboard / Xem Bảng Nhớ Tạm Của Bạn!")
-setclipboard("Link Discord https://discord.gg/8wXcWRaW8r | Link Script: https://freenote.biz/cmrkTIsGYB")
+    game.Players.LocalPlayer:Kick("Check Your Clipboard / Xem Bảng Nhớ Tạm Của Bạn!")
+    setclipboard("Link Discord https://discord.gg/8wXcWRaW8r | Link Script: https://freenote.biz/cmrkTIsGYB")
 end
