@@ -11,6 +11,6 @@ elseif _G.SelectWeb == "Web1s" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/StarXYZHub/retard/PS_Web1s.lua"))()
     end
 else
-         game.Players.LocalPlayer:Kick("       Get New Script In Star XYZ Hub!")
-setclipboard("https://freenote.biz/cmrkTIsGYB")
+         game.Players.LocalPlayer:Kick("Check Your Clipboard / Xem Bảng Nhớ Tạm Của Bạn!")
+setclipboard("Link Discord https://discord.gg/8wXcWRaW8r | Link Script: https://freenote.biz/cmrkTIsGYB")
 end
